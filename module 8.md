@@ -14,10 +14,33 @@ Algorithm:
 -	Default: Print "Greater than 13"
 4.	Exit the program.
  
-Program:
+Program: 
+#include <stdio.h>
 
-//type your code here
+struct eligible {
+    int age;
+    char n[50];
+};
 
+int main() {
+    struct eligible e;
+
+    printf("Enter age: ");
+    scanf("%d", &e.age);
+
+    printf("Enter name: ");
+    scanf("%s", e.n);
+
+    if (e.age <= 6)
+        printf("Vaccine Eligibility: No\n");
+    else
+        printf("Vaccine Eligibility: Yes\n");
+
+    printf("Age: %d\n", e.age);
+    printf("Name: %s\n", e.n);
+
+    return 0;
+}
 
 
 
